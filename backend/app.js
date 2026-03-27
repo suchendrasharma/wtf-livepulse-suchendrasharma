@@ -14,6 +14,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from public directory
+app.use(express.static('public'));
+
 // Routes
 app.use("/api/gyms", gymRoutes);
 // app.use("/api/analytics", analyticsRoutes);
